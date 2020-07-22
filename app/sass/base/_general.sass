@@ -20,7 +20,7 @@ body
   font-size: 15px
   min-width: 320px
   position: relative
-  line-height: 1
+  line-height: 23px
   font-family: $default-font
   overflow-x: hidden
   color: $text
@@ -107,7 +107,23 @@ ul
   &:hover
     background: $acc-hover
 
-    
+.btn
+  display: inline-block
+  font-weight: 700
+  cursor: pointer
+  +mt(.3s)
+  white-space: nowrap
+  padding: 10px 27px 12px
+  border-radius: 2px
+
+.btn-accent
+  color: #fff
+  background-color: $accent
+  &:hover
+    color: #fff
+    background-color: $acc-hover
+
+
 .lm-socials
   font-size: 0
   display: inline-flex
@@ -129,5 +145,19 @@ ul
     path
       //+mt(.3s)
       fill: rgba($acc-dark, .15)
+
+
+form
+  label
+    display: block
+  input
+    width: 100%
+    padding: 7px 19px 9px
+    background-color: $acc-light
+    border: 3px solid #F9EFF7
+    border-radius: 3px
+    color: $accent
+    &::placeholder
+      color: rgba($accent, .4)
 
 
