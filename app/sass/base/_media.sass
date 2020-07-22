@@ -10,9 +10,44 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+  .lm-index-intro-slide
+    padding: 70px
+    text-align: center
+    height: 380px
+    &:before
+      background: linear-gradient(180deg, #160013 0%, rgba(22, 0, 19, 0) 88.95%)
+      opacity: .8
+    &-title
+      position: relative
+      font-size: 24px
+      span
+        font-size: 46px
+    &-prices
+      position: relative
+    &:hover
+      &:before
+        opacity: .8
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .lm-index-intro-slider
+    border-radius: 5px
+    overflow: hidden
+
+  .lm-index-intro-slide
+    border-radius: 5px
+    &-title
+      font-size: 20px
+      span
+        font-size: 30px
+
+  section
+    margin-top: 25px
+
+  .lm-head-line
+    padding-bottom: 16px
+
   .lm-head-line
     flex-wrap: wrap
     .lm-form-search
@@ -27,9 +62,73 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+  .lm-index-intro-slider
+    .owl-nav
+      top: calc(50% - 17.5px)
+      button.owl-prev, button.owl-next
+        width: 38px
+        height: 35px
+        background-size: 10px 20px
+
+  .lm-index-intro-slide
+    padding: 40px 50px 60px
+    height: 280px
+    &-title
+      font-size: 16px
+      span
+        font-size: 24px
+    &-prices
+      &>span
+        font-size: 18px
+        line-height: 27px
+        padding-top: 3px!important
 
 
 @media (max-width: 390px)
+
+  .owl-carousel
+    .owl-dots
+      button.owl-dot
+        width: 5.5px
+        height: 5.5px
+        margin: 0 3px
+        &.active
+          width: 7px
+          height: 7px
+          top: .75px
+
+  .lm-index-intro-slider
+    .owl-nav
+      top: calc(50% - 14px)
+      button.owl-prev, button.owl-next
+        width: 30px
+        height: 28px
+        background-size: 8px 15px
+    .owl-dots
+      bottom: 13px
+
+  .lm-index-intro-slide
+    padding: 30px 40px
+    height: auto
+    &-title
+      font-size: 13px
+      span
+        font-size: 18px
+        margin-bottom: 10px
+        margin-top: 5px
+    &-prices
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      &>span
+        display: block
+        font-size: 18px
+        line-height: 27px
+        padding-top: 3px!important
+      .new
+        margin-right: 0
+        margin-bottom: 5px
 
   .lm-head-links
     display: flex

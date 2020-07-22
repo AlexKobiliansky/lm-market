@@ -1,0 +1,62 @@
+.lm-index-s-intro
+  margin-top: 0
+
+.lm-index-intro-slider
+  .owl-dots
+    bottom: 30px
+    button.owl-dot
+      background-color: rgba(#fff, .3)
+      &:hover
+        background-color: rgba($acc-hover, .6)
+      &.active
+        background-color: #fff
+
+.lm-index-intro-slide
+  border-radius: 3px
+  +bg-cover
+  color: #fff!important
+  height: 410px
+  padding: 96px 153px 60px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: $acc-hover
+    opacity: 0
+    +mt(.3s)
+  &-title
+    display: inline-block
+    font-size: 30px
+    line-height: 1.2
+    font-family: "Archive", sans-serif
+    span
+      text-transform: uppercase
+      font-size: 53px
+      display: inline-block
+      margin-top: 15px
+      margin-bottom: 27px
+  &-prices
+    &>span
+      display: inline-block
+      font-size: 30px
+      line-height: 1.5
+      font-weight: 700
+    .new
+      color: $accent
+      background-color: #fff
+      padding: 0 13px
+      margin-right: 16px
+      border-radius: 2px
+    .old
+      color: #fff
+      text-decoration: line-through
+  &:hover
+    &:before
+      opacity: .2

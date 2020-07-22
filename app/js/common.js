@@ -34,6 +34,20 @@ $(document).ready(function(){
         }, 'xml');
     });
 
+    $('.lm-index-intro-slider').owlCarousel({
+        loop: true,
+        nav: true,
+        margin: 30,
+        dots: true,
+        items: 1,
+        navSpeed: 700,
+        dotsSpeed: 700,
+        autoplaySpeed: 700,
+        autoplayTimeout: 8000,
+        autoplay: true,
+        navText: ["",""]
+    });
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
