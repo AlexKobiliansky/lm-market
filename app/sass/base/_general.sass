@@ -63,5 +63,71 @@ ul
 .hidden
   display: none!important
 // ======= END TEMPLATE STYLES =======
+.jq-selectbox
+  &.opened
+    .jq-selectbox__trigger-arrow
+      transform: rotate(180deg)
+
+.jq-selectbox__select
+  color: $accent
+  padding: 0 12px 0 0
+  border: none!important
+  background: transparent!important
+  box-shadow: none!important
+  line-height: 23px
+  font-family: $default-font
+  font-weight: 700
+  height: auto
+  width: auto!important
+
+
+.jq-selectbox__select-text
+  width: auto!important
+
+.jq-selectbox__trigger
+  border: none
+
+.jq-selectbox__trigger-arrow
+  border: none
+  width: 8px
+  height: 4px
+  background-image: url('../img/icons/select-arrow.svg')
+  +bg-cover
+  right: 0
+  top: 10px
+
+.jq-selectbox__dropdown
+  width: auto
+
+.jq-selectbox li
+  font-size: 13px
+  padding: 3px 8px 4px
+  &.selected
+    background: $accent
+  &:hover
+    background: $acc-hover
+
+    
+.lm-socials
+  font-size: 0
+  display: inline-flex
+  align-items: center
+  a
+    display: inline-flex
+    height: 18px
+    align-items: center
+    margin-left: 10px
+    &:hover
+      .svg
+        path
+          fill: inherit
+    &:first-child
+      margin-left: 0
+  .svg
+    vertical-align: middle
+    width: auto
+    path
+      //+mt(.3s)
+      fill: rgba($acc-dark, .15)
 
 
