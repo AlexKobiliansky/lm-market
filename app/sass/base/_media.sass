@@ -10,6 +10,17 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .lm-section-title
+    margin-bottom: 20px
+    text-align: center
+
+  .lm-index-pop-slide
+    height: 180px
+    &-title
+      font-size: 18px
+      line-height: 1.25
+
   .lm-index-intro-slide
     padding: 70px
     text-align: center
@@ -62,6 +73,46 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .lm-section-title
+    font-size: 18px
+    margin-bottom: 15px
+
+  .lm-index-populars-slider
+    width: calc(100% + 15px)
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      height: 100%
+      width: 127px
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+      z-index: 2
+      opacity: .9
+
+  .lm-index-pop-slide
+    width: 150px
+    display: block
+    padding: 0
+    border-radius: 5px
+    height: auto
+    &:before
+      display: none
+    &-img
+      position: relative
+      display: block
+      height: 110px
+      border-radius: 5px
+      margin-bottom: 10px
+    &-title
+      color: $accent
+      text-align: center
+      display: block
+      font-size: 16px
+      line-height: 1.25
+
+
   .lm-index-intro-slider
     .owl-nav
       top: calc(50% - 17.5px)
@@ -83,8 +134,26 @@
         line-height: 27px
         padding-top: 3px!important
 
+  .lm-head-links
+    display: flex
+    justify-content: space-between
+    width: 100%
+    align-items: flex-end
+
+  .lm-head-link
+    margin-left: 0
+    span
+      margin-top: 0
 
 @media (max-width: 390px)
+
+  .lm-index-pop-slide
+    width: 100px
+    &-img
+      height: 80px
+      margin-bottom: 7px
+    &-title
+      font-size: 13px
 
   .owl-carousel
     .owl-dots
@@ -130,16 +199,7 @@
         margin-right: 0
         margin-bottom: 5px
 
-  .lm-head-links
-    display: flex
-    justify-content: space-between
-    width: 100%
-    align-items: flex-end
 
-  .lm-head-link
-    margin-left: 0
-    span
-      margin-top: 0
 
   body
     font-size: 13px
