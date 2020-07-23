@@ -26,6 +26,10 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .foot-line
+    .lm-socials
+      margin-left: 0
+
   .lm-index-banner-item
     &-title
       font-size: 32px
@@ -68,6 +72,63 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .foot-line
+    flex-direction: column-reverse
+    align-items: center
+    padding-top: 11px
+    padding-bottom: 14px
+    .lm-socials
+      margin-bottom: 9px
+
+  .foot-phone
+    margin-bottom: 13px
+
+  .stores-container
+    margin-bottom: 16px
+
+  .store-link
+    display: inline-block
+    margin-bottom: 0
+    vertical-align: top
+    &:first-child
+      margin-right: 10px
+
+  .foot-mnu
+    border: 1px solid #EFE4ED
+    padding: 16px 35px 16px 19px
+    border-bottom: none
+    h3
+      margin-bottom: 4px
+      position: relative
+      cursor: pointer
+      &:after
+        content: ''
+        position: absolute
+        width: 16px
+        height: 8px
+        background-image: url('../img/icons/foot-arrow.svg')
+        +bg-cover
+        right: -10px
+        top: calc(50% - 4px)
+      &.opened
+        &:after
+          transform: rotate(180deg)
+    ul
+      display: none
+
+  .main-foot
+    padding-top: 25px
+    .col-md-3
+      &:nth-last-child(2)
+        .foot-mnu
+          border-bottom: 1px solid #EFE4ED
+          border-bottom-left-radius: 3px
+          border-bottom-right-radius: 3px
+      &:first-child
+        .foot-mnu
+          border-top-left-radius: 3px
+          border-top-right-radius: 3px
 
   .lm-index-brand-title
     display: none
@@ -261,6 +322,27 @@
       margin-top: 0
 
 @media (max-width: 390px)
+
+  .foot-mnu
+    padding-top: 12px
+    padding-bottom: 12px
+    h3
+      font-size: 13px
+      margin-bottom: 0
+      &:after
+        width: 8px
+        height: 4px
+        right: -20px
+        top: calc(50% - 2px)
+    li
+      font-size: 12px
+      line-height: 2
+
+  .foot-phone
+    font-size: 18px
+
+  .copyright
+    font-size: 11px
 
   .lm-index-brand-row
     padding: 0 7px

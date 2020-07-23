@@ -164,7 +164,14 @@ $(document).ready(function(){
         e.preventDefault();
         $(this).toggleClass('opened');
         $('.lm-index-tools-slider').toggleClass('opened');
-    })
+    });
+
+    if($(window).width() < 768) {
+        $('.foot-mnu h3').on('click', function(){
+            $(this).toggleClass('opened');
+            $(this).siblings('ul').slideToggle();
+        })
+    }
 
 
 
