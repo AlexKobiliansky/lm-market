@@ -42,6 +42,18 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .lm-index-tool-slide
+    ul
+      display: none
+
+  .open-tools-slider
+    display: none
+
+  .lm-index-tools-slider
+    height: auto
+    &:before
+      display: none
+
   .lm-index-intro-slider
     border-radius: 5px
     overflow: hidden
@@ -73,6 +85,35 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .lm-index-s-tools
+    .lm-section-title
+      margin-bottom: 17px
+
+  .lm-index-tool-slide
+    &-img
+      height: 34px
+      margin-bottom: 7px
+      img
+        max-height: 100%
+        width: auto
+    &-title
+      font-size: 13px
+
+  .lm-index-tools-slider
+    width: calc(100% + 15px)
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      right: 0
+      left: auto
+      top: 0
+      height: 100%
+      width: 127px
+      background-image: linear-gradient(to right,rgba(255,255,255,0) 0,#fff 100%)
+      z-index: 2
+      opacity: .9
 
   .lm-index-product-slide
     padding-top: 27px

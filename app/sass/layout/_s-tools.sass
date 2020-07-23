@@ -1,0 +1,72 @@
+.lm-index-s-tools
+  overflow: hidden
+  .lm-section-title
+    margin-bottom: 55px
+  .container
+    position: relative
+
+.open-tools-slider
+  position: absolute
+  z-index: 4
+  bottom: 35px
+  left: calc(50% - 12px)
+  path
+    +mt(.3s)
+  &:hover
+    path
+      stroke: $acc-hover
+  &.opened
+    transform: rotate(180deg)
+
+
+.lm-index-tools-slider
+  height: 330px
+  overflow: hidden
+  .owl-item
+    img
+      width: auto
+      display: inline-block
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 140px
+    left: 0
+    bottom: 0
+    background-image: linear-gradient(180deg, rgba(255, 249, 254, 0) 0%, #FFF9FE 69.27%)
+    z-index: 2
+    +mt(.2s)
+    opacity: 1
+  .owl-dots
+    z-index: 3
+    bottom: 5px
+  .owl-nav
+    top: 85px
+  &.opened
+    height: auto
+    padding-bottom: 70px
+    &:before
+      display: none
+
+
+.lm-index-tool-slide
+  text-align: center
+  &-img
+    display: flex
+    height: 65px
+    justify-content: center
+    align-items: center
+    margin-bottom: 25px
+  &-title
+    font-size: 22px
+    font-weight: 700
+    line-height: 1.5
+    margin-bottom: 13px
+    display: block
+    color: $acc-dark
+  ul
+    line-height: 2.2
+    a
+      color: rgba($acc-dark, .5)
+      &:hover
+        color: $acc-hover
