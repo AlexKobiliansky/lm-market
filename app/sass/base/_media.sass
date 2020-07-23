@@ -5,11 +5,35 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .lm-index-banner-item
+    &-title
+      font-size: 17px
+      span
+        font-size: 20px
+    &:nth-child(2)
+      .lm-index-banner-item-title
+        font-size: 24px
+        span
+          font-size: 36px
+
   .lm-topline-wrap
     background-color: $acc-light
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .lm-index-banner-item
+    &-title
+      font-size: 32px
+      span
+        font-size: 60px
+
+  .lm-index-banners-wrap
+    display: none
+
+  .lm-index-banners-slider
+    display: block!important
 
   .lm-section-title
     margin-bottom: 20px
@@ -41,6 +65,14 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .lm-index-banner-item
+    height: 340px
+    &-title
+      font-size: 24px
+      span
+        font-size: 34px
+
 
   .lm-index-tool-slide
     ul
@@ -85,6 +117,15 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .lm-index-banner-item
+    height: 300px
+    &-title
+      font-size: 20px
+      span
+        font-size: 28px
+    &-price
+      font-size: 24px
 
   .lm-index-s-tools
     .lm-section-title
@@ -197,6 +238,20 @@
 
 @media (max-width: 390px)
 
+  .lm-index-banner-item
+    height: 180px
+    padding-top: 30px
+    padding-bottom: 35px
+    padding-left: 50px
+    padding-right: 50px
+    &-title
+      font-size: 13px
+      span
+        font-size: 18px
+        margin-top: 5px
+    &-price
+      font-size: 18px
+
   .lm-index-product-slide
     &-img
       height: 110px
@@ -267,8 +322,6 @@
       .new
         margin-right: 0
         margin-bottom: 5px
-
-
 
   body
     font-size: 13px
