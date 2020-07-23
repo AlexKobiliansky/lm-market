@@ -6,6 +6,9 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .lm-index-s-brands
+    padding-bottom: 30px
+
   .lm-index-banner-item
     &-title
       font-size: 17px
@@ -66,6 +69,20 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .lm-index-brand-title
+    display: none
+
+  .lm-index-brands-wrap
+    flex-wrap: wrap
+    justify-content: flex-start
+
+  .lm-index-brand-row
+    width: 33.3333%
+    &:nth-child(4), &:nth-child(5)
+      display: none
+
+
+
   .lm-index-banner-item
     height: 340px
     &-title
@@ -117,6 +134,10 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .lm-index-brand-item
+    margin-bottom: 15px
+    height: 50px
 
   .lm-index-banner-item
     height: 300px
@@ -225,6 +246,9 @@
         line-height: 27px
         padding-top: 3px!important
 
+  .lm-head-cart .lm-num
+    top: -2px
+
   .lm-head-links
     display: flex
     justify-content: space-between
@@ -237,6 +261,13 @@
       margin-top: 0
 
 @media (max-width: 390px)
+
+  .lm-index-brand-row
+    padding: 0 7px
+
+  .lm-index-brand-item
+    height: 40px
+    margin-bottom: 10px
 
   .lm-index-banner-item
     height: 180px
