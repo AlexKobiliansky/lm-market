@@ -1,0 +1,102 @@
+.lm-index-product-slide
+  padding: 31px 6px 36px
+  border-radius: 3px
+  background-color: #fff
+  position: relative
+  border: 3px solid $acc-light
+  +mt(.3s)
+  &-img
+    height: 220px
+    margin-bottom: 22px
+    margin-left: 25px
+    margin-right: 25px
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+  &-title
+    color: $acc-dark
+    font-weight: 700
+    text-align: center
+    margin-bottom: 13px
+    display: block
+    line-height: 1.5em
+    max-height: 3em
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 2
+    overflow: hidden
+    &:hover
+      color: $acc-hover
+  &-bottom
+    display: flex
+    justify-content: center
+  &-prices
+    width: 88px
+    height: 45px
+    border-radius: 2px
+    background-color: $acc-light
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    font-weight: 700
+    &.sale
+      line-height: 1
+      .new
+        color: $accent
+        margin-bottom: 3px
+      .old
+        font-size: 11px
+        color: rgba($acc-dark, .3)
+        text-decoration: line-through
+  &-cart
+    width: 45px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 3px solid $acc-light
+    border-radius: 2px
+    margin-left: 10px
+    path
+      +mt(.3s)
+    &:hover
+      path
+        stroke: $acc-hover
+  &-options
+    position: absolute
+    z-index: 3
+    right: 22px
+    top: 19px
+    .compare
+      display: inline-block
+      margin-left: 9px
+      .svg
+        width: 20px
+        height: auto
+        opacity: .3
+        +mt(.3s)
+      &:hover
+        .svg
+          opacity: 1
+    .feature
+      position: relative
+      top: 1px
+      .svg
+        width: 22px
+        height: auto
+        +mt(.3s)
+        fill: $accent
+        opacity: .3
+      &:hover
+        .svg
+          opacity: 1
+  &:hover
+    border-color: #FCEBF9
+
+
+
+
+
+
+

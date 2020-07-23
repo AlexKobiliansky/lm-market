@@ -68,7 +68,8 @@ $(document).ready(function(){
             },
             480: {
                 items: 2,
-                autoWidth: false
+                autoWidth: false,
+                dots: false
             },
             768: {
                 items: 3
@@ -78,6 +79,39 @@ $(document).ready(function(){
             }
         }
     });
+
+
+    $('.lm-index-products-slider').owlCarousel({
+        loop: false,
+        nav: true,
+        margin: 25,
+        dots: true,
+        items: 4,
+        navSpeed: 700,
+        dotsSpeed: 700,
+        navText: ["",""],
+        autoWidth: false,
+        responsive: {
+            0: {
+                dots: false,
+                margin: 10,
+                items: 2
+            },
+            480: {
+                items: 2,
+                autoWidth: false,
+                dots: false,
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 4
+            }
+        }
+    });
+
+
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change
