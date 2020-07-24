@@ -222,3 +222,107 @@ section
   margin-bottom: 32px
   font-weight: normal
 
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form, .video-popup
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form, &.mfp-ready .video-popup
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form, &.mfp-removing .video-popup
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .2
+    background: #3F0738
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+.mfp-close-btn-in .mfp-close
+  color: $accent
+  opacity: .5
+  +mt(.2s)
+  &:hover
+    opacity: 1
+
+.popup-form
+  position: relative
+  background-color: #fff
+  display: block
+  max-width: 404px
+  margin-left: auto
+  margin-right: auto
+  padding: 52px 48px 54px 59px
+  h3
+    font-family: "Archive", sans-serif
+    font-size: 30px
+    line-height: 1.2
+    font-weight: normal
+    margin-bottom: 35px
+    span
+      display: block
+      font-family: $default-font
+      font-size: 15px
+      line-height: 23px
+      color: rgba($acc-dark, .5)
+      a
+        color: inherit
+  label
+    margin-bottom: 15px
+    span
+      font-weight: 700
+      display: inline-block
+      margin-bottom: 14px
+  .btn
+    width: 100%
+    padding: 10px 10px 12px
+    border: none
+  .notice
+    color: rgba($acc-dark, .5)
+    margin-top: 30px
+    &>span
+      display: block
+    a
+      color: rgba($acc-hover, .5)
+      &:hover
+        color: $acc-hover
+  .resend-code
+    display: inline-block
+    margin-top: 3px
+    width: auto
+    border-bottom: 1px dotted
+
+.code-form
+  padding-top: 94px
+  .back-link
+    background-color: $acc-light
+    font-size: 13px
+    line-height: 44px
+    position: absolute
+    top: 0
+    left: 0
+    color: rgba($accent, .6)
+    width: 100%
+    padding-right: 48px
+    padding-left: 59px
+    &:before
+      content: ''
+      position: absolute
+      background-image: url('../img/icons/slider-arrow.svg')
+      transform: rotate(180deg)
+      width: 7px
+      height: 14px
+      +bg-cover
+      left: 32px
+      top: calc(50% - 8px)
+      +mt(.3s)
+      opacity: .6
+    &:hover
+      color: $accent
+      &:before
+        opacity: 1

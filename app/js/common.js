@@ -173,19 +173,19 @@ $(document).ready(function(){
         })
     }
 
-
-
-    //E-mail Ajax Send
-    $("form").submit(function() { //Change
-        var th = $(this);
-
-        $.ajax({
-            type: "POST",
-            url: "mail.php", //Change
-            data: th.serialize()
-        }).done(function() {
-
-        });
-        return false;
+    $(function() {
+        $("a[href='#signin-form'], a[href='#code-form'], a[href='#register-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
     });
+
+
 });

@@ -78,9 +78,9 @@
 				</label>
 
 				<div class="lm-top-links d-none d-xl-block">
-					<a href="#0">О маркетплейсе</a>
-					<a href="#0">Где мой заказ?</a>
-					<a href="#0">Контакты</a>
+					<a href="#signin-form">О маркетплейсе</a>
+					<a href="#code-form">Где мой заказ?</a>
+					<a href="#register-form">Контакты</a>
 				</div>
 
 				<div class="lm-socials d-none d-xl-inline-flex">
@@ -940,6 +940,58 @@
 
 </footer>
 <!-- ======= FOOTER END ======= -->
+
+
+
+<div class="hidden+">
+	<form class="popup-form signin-form" id="signin-form">
+		<h3>Войти в профиль <span>или <a href="#0">зарегистрироваться</a></span></h3>
+
+		<label>
+			<span>Номер телефона</span>
+			<input type="text" class="user-phone" name="Телефон" placeholder="+7 (___) ___-__-__"
+				   autocomplete="off" data-validation="custom"
+				   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+		</label>
+		<button type="submit" class="btn btn-accent">Получить СМС код</button>
+		<div class="notice">Нажимая кнопку «Получить СМС код», я соглашаюсь с <a href="#0">политикой обработки персональных данных</a></div>
+	</form>
+
+
+	<form class="popup-form code-form" id="code-form">
+
+		<a href="#0" class="back-link">Вернуться к вводу номера</a>
+
+		<h3>Введите код</h3>
+
+		<label>
+			<span>Код выслан на номер +7 977 883 63 28</span>
+			<input type="text" name="code" placeholder="Введите код"
+				   autocomplete="off" data-validation="required">
+		</label>
+		<button type="submit" class="btn btn-accent">Подтвердить</button>
+		<div class="notice"><span>Повторная отправка доступна через 00:59 </span><a href="#0" class="resend-code">Повторно выслать код</a></div>
+	</form>
+
+
+
+	<form class="popup-form register-form" id="register-form">
+		<h3>Ваши данные</h3>
+
+		<label>
+			<span>Ваше имя</span>
+			<input type="text" name="name" placeholder=""
+				   autocomplete="off" data-validation="required">
+		</label>
+
+		<label>
+			<span>Фамилия</span>
+			<input type="text" name="last-name" placeholder=""
+				   autocomplete="off" data-validation="required">
+		</label>
+		<button type="submit" class="btn btn-accent">Подтвердить</button>
+	</form>
+</div>
 
 <script src="js/scripts.min.js"></script>
 
